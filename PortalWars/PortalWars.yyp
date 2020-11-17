@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "996afadf-16c9-4167-9e5c-688db42f2f48",
+            "Value": {
+                "id": "9bc419e4-fa24-4e45-82f7-27c62c63ef4a",
+                "resourcePath": "sprites\/s_PurpleBob\/s_PurpleBob.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "ace5a79b-dd0b-4a7a-a8c2-3f9b0c51f4c3",
@@ -164,6 +172,14 @@
                 "id": "15fd8cf6-f05a-4838-b4b8-abd974cb2d32",
                 "resourcePath": "views\/e520248d-b590-4f44-ba74-8068fcc8dfab.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f1f49692-9271-476e-b388-f0fe78d275d4",
+            "Value": {
+                "id": "998b674b-17fa-4ff1-846d-8553ef9a5ecb",
+                "resourcePath": "objects\/o_PurpleBob\/o_PurpleBob.yy",
+                "resourceType": "GMObject"
             }
         },
         {
