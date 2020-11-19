@@ -1,3 +1,7 @@
 /// @description go left
-// You can write your code in this editor
-x = x - 5;
+
+if(! place_meeting(x - 5, y, o_Wall)){
+	x = x - 5;
+}
+facing = "left";
+image_xscale = 1;
