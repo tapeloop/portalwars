@@ -38,7 +38,6 @@ if(place_meeting(x, y+vsp, o_Ground)){
  
 y = y + vsp;
 
-if (position_meeting(x, y, o_Portal)) {
-	show_debug_message("this."+o_Portal.x+" other."+o_Portal.pair.x)
-    draw_sprite_ext(sprite_index, image_index, o_Portal.pair.x, o_Portal.pair.y, 1, 1, 0, image_blend, image_alpha);
-}
+//if (place_meeting(x, y, o_Portal)) {
+  //  draw_sprite_ext(sprite_index, image_index, o_Portal.pair.x, o_Portal.pair.y, 1, 1, 0, image_blend, image_alpha);
+//}
