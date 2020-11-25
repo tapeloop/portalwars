@@ -1,35 +1,31 @@
 /// @description Insert description here
 
-draw_self();
 
-inst = instance_place(x, y, o_Portal);
-// draw_sprite_part(sprite, subimg, left, top, width, height, x, y);
+
+var inst = instance_place(x, y, o_Portal);
  
- 
-if inst != noone {   
+if (inst != noone) {
 	
-	
-		// if facing left thickness of slice is inst.x - self.x
-		// if facing right thickness of slice is self.x - inst.x;
+		var distanceFromLeft = 0; // moves with 
+		var distanceFromTop = 0;
+		var thicknessOfSlice = inst.x + 32 - self.x;
 	   
-	   var distanceFromLeft = 0; // moves with 
-	   var distanceFromTop = 0; // stays permanent
-	   var thicknessOfSlice = inst.x - self.x; 
-	   
-	   var movingX = inst.pair.x;
-	   var movingY = inst.pair.y;
-	   
-	   var xScale = 1;
-	   
-	   if (self.facing == "right") {
-			xScale = -1;
-			thicknessOfSlice = self.x - inst.x; 
-	   }
-	   
-	   draw_sprite_part_ext(sprite_index, 0, distanceFromLeft, distanceFromTop, thicknessOfSlice, sprite_height, movingX, movingY, xScale, 1, c_white, 1);
+		var movingX = inst.pair.x - thicknessOfSlice + 32;
+		var xScale = 1;
+		
+		// in - needs work
+		draw_sprite_part_ext(sprite_index, 0, thicknessOfSlice +32, distanceFromTop, 64 - thicknessOfSlice, sprite_height, x, y, xScale, 1, c_white, 1);
+	 
+		// out - WORKING
+		draw_sprite_part_ext(sprite_index, 0, 0, 0, thicknessOfSlice, sprite_height, movingX, y, xScale, 1, c_white, 1);
+		inPortal = true;
    }
-//if(place_meeting(self.x, self.y, o_Portal)){
-//	show_debug_message("dimensions: "+string(o_Portal.pair.x) +", "+ string(o_Portal.pair.y));
-	
-//	draw_sprite_part(sprite_index, 0, 0, 64, 64, sprite_height, 500, 500);
-//}
+   else {
+	draw_self();
+   }
+   
+if ((inst == noone) && (inPortal == true)){
+	var inst2 = instance_furthest(self.x,self.y, o_Portal);
+	self.x = inst2.x - 32;;
+	inPortal = false;
+   }

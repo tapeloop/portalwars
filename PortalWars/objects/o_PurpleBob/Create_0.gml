@@ -9,3 +9,5 @@ isJumping = false;
 tokens = 0;
 
 facing = "left";
+
+inPortal = false;
